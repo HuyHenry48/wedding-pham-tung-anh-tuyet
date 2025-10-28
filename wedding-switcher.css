@@ -1,0 +1,123 @@
+/* Wedding Switcher CSS - Tùy chỉnh giao diện cho nhà trai và nhà gái */
+
+/* Hiệu ứng chuyển đổi mượt mà */
+body.groom-view *,
+body.bride-view * {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Có thể thêm màu sắc đặc trưng cho từng bên */
+body.groom-view .accent-color {
+    color: #2c5f8d; /* Màu xanh cho nhà trai */
+}
+
+body.bride-view .accent-color {
+    color: #d4a5a5; /* Màu hồng cho nhà gái */
+}
+
+/* Ví dụ: Đổi màu nền của một số sections */
+body.groom-view .timeline-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+body.bride-view .timeline-section {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+/* Fix cho mobile - Tránh Timeline bị đè lên phần tử khác */
+@media (max-width: 768px) {
+    /* Tăng khoảng cách giữa các section trên mobile */
+    #SECTION354 {
+        margin-bottom: 30px !important;
+        padding-bottom: 30px !important;
+    }
+    
+    /* Đảm bảo các GROUP trong timeline có khoảng cách phù hợp */
+    #GROUP478, #GROUP479, #GROUP481 {
+        margin-bottom: 20px !important;
+        position: relative !important;
+    }
+
+    /* Fix font-size cho timeline title trên mobile */
+    #HEADLINE445 #timeline-title,
+    #timeline-title,
+    #timeline-title h3,
+    .ladi-headline#timeline-title,
+    #HEADLINE445 .ladi-headline {
+        font-size: 35px !important;
+        line-height: 1.3 !important;
+    }
+    
+    /* Fix cho GROUP496 (timeline items container) */
+    #GROUP496 {
+        min-height: 300px !important;
+        margin-bottom: 30px !important;
+    }
+    
+    /* Đảm bảo các nút "Nhà Trai" và "Nhà Gái" không bị đè */
+    #GROUP535, #GROUP536 {
+        margin: 15px 0 !important;
+        z-index: 10 !important;
+        position: relative !important;
+    }
+    
+    /* Fix cho phần hình ảnh timeline */
+    #IMAGE414 {
+        margin-top: 20px !important;
+        margin-bottom: 20px !important;
+    }
+    
+    /* Fix cho text bị che trên mobile */
+    .ladi-headline, .ladi-paragraph {
+        z-index: 100 !important;
+        position: relative !important;
+    }
+    
+    /* Đảm bảo text không bị overflow */
+    .ladi-headline h1,
+    .ladi-headline h2,
+    .ladi-headline h3,
+    .ladi-paragraph {
+        overflow: visible !important;
+        white-space: normal !important;
+        word-wrap: break-word !important;
+    }
+    
+    /* Fix cho các section chính */
+    .ladi-section {
+        overflow: visible !important;
+    }
+    
+    /* Tăng line-height cho dễ đọc trên mobile */
+    .ladi-paragraph {
+        line-height: 1.6 !important;
+    }
+}
+
+/* Transition mượt mà cho việc đảo thứ tự */
+body.bride-view #GROUP515,
+body.bride-view #GROUP517,
+body.bride-view #GROUP516 .ladi-group > * {
+    transition: all 0.5s ease-in-out;
+}
+
+/* Hiệu ứng highlight cho view hiện tại */
+body.bride-view #GROUP455 {
+    box-shadow: 0 4px 8px rgba(212, 165, 165, 0.3) !important;
+}
+
+body.groom-view #GROUP454 {
+    box-shadow: 0 4px 8px rgba(44, 95, 141, 0.3) !important;
+}
+
+/* Fix riêng cho màn hình nhỏ hơn (iPhone 14 Pro Max và tương tự) */
+@media (max-width: 430px) {
+    #HEADLINE445 #timeline-title,
+    #timeline-title,
+    #timeline-title h3,
+    .ladi-headline#timeline-title,
+    #HEADLINE445 .ladi-headline {
+        font-size: 35px !important;
+        line-height: 1.3 !important;
+    }
+}
