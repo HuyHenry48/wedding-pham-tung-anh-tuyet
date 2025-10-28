@@ -21,7 +21,7 @@
         
         // Cập nhật timeline cho nhà gái
         window.owiData.timeline = {
-            title: "Wedding Timeline - Nhà Gái",
+            title: "Wedding Timeline",
              step1: {
                 time: "9:30 Thứ Bảy, ngày 08.11.2025",
                 title: "Chụp ảnh cùng gia đình"
@@ -72,7 +72,7 @@
         
         // Cập nhật timeline cho nhà trai
         window.owiData.timeline = {
-            title: "Wedding Timeline - Nhà Trai",
+            title: "Wedding Timeline",
             step1: {
                 time: "11:00 Thứ Bảy, ngày 08.11.2025",
                 title: "Chụp ảnh cùng gia đình"
